@@ -25,8 +25,8 @@ describe("Order unit tests", () => {
     })
 
     it("should throw error when order has item with quantity zero", () => {
-        const item1 = new OrderItem("i1", "Item 1", "p1", 10, 1);
-        const item2 = new OrderItem("i1", "Item 1", "p2", 50, 0);
+        const item1 = new OrderItem("i1", "p1", 10, 1);
+        const item2 = new OrderItem("i1", "p2", 50, 0);
 
         expect(() => {
             new Order("o1", "c1", [item1, item2]);
@@ -34,8 +34,8 @@ describe("Order unit tests", () => {
     })
 
     it("should calculate total", () => {
-        const item1 = new OrderItem("i1", "Item 1", "p1", 10, 1);
-        const item2 = new OrderItem("i1", "Item 1", "p2", 50, 2);
+        const item1 = new OrderItem("i1", "p1", 10, 1);
+        const item2 = new OrderItem("i1", "p2", 50, 2);
         const order1 = new Order("o1", "c1", [item1]);
         let total = order1.total();
         
