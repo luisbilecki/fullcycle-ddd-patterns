@@ -1,4 +1,4 @@
-import Customer from "../entity/customer";
+import Customer from "../../customer/entity/customer";
 import Order from "../entity/order";
 import OrderItem from "../entity/order_item";
 import OrderService from "./order.service";
@@ -6,7 +6,6 @@ import OrderService from "./order.service";
 describe("Order service unit tests", () => {
 
     it("should place an order", () => {
-
         const customer1 = new Customer("c1", "Customer 1");
         const item1 = new OrderItem("i1", "n1", "p1", 10, 1);
 
@@ -17,7 +16,6 @@ describe("Order service unit tests", () => {
     });
 
     it("should get total of all orders", () => {
-    
         const item1 = new OrderItem("i1", "n1", "p1", 100, 1);
         const item2 = new OrderItem("i2", "n1", "p2", 200, 2);
 
